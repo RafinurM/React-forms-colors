@@ -15,6 +15,7 @@ function ColorSwitcher() {
     function checkColor(event) {
         if (event.target.value.length != 7) return
         if (!regExp.test(event.target.value)) {
+            document.body.style.backgroundColor = 'red';
             setRgb( () => rgb = 'Ошибка!') 
         } else {
             document.body.style.backgroundColor = event.target.value;
